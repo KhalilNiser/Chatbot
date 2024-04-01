@@ -1,21 +1,17 @@
 from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+from chatterbot.trainers import ListTrainer, ChatterBotCorpusTrainer
+
+import collections.abc
+collections.Hashable = collections.abc.Hashable
 
 # Create a new chatbot instance
 chatbot = ChatBot('MyBot')
 
 # Train the chatbot with a list of conversation examples
-trainer = ListTrainer(chatbot)
-trainer.train([
-    'Hi there!',
-    'Hello!',
-    'How are you?',
-    'I am doing well.',
-    'What is your name?',
-    'My name is MyBot.',
-    'What can you do?',
-    'I can chat with you about a variety of topics.',
-])
+trainer = ChatterBotCorpusTrainer(chatbot)
+trainer.train(
+    "chatterbot.corpus.english"
+)
 
 # Start the conversation
 while True:
