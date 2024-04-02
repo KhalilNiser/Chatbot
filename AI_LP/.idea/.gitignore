@@ -7,3 +7,6 @@
 /AI_LP.iml
 /.idea/vcs.xml
 /db.sqlite3
+/test_run/chatdata.pth
+/test_run/model.cpython-312.pyc
+/test_run/nltk_utils.cpython-312.pyc
