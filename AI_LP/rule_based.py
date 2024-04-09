@@ -19,6 +19,10 @@ def thank_you(user_input):
     if 'thank' in user_input.lower():
         return "You're welcome! Happy to help."
 
+# Define a function to handle 'tell me a joke'
+def joke(user_input):
+    if 'tell me a joke' in user_input.lower():
+        return "What did the comforter say after falling off the bed? Oh, sheet!"
 
 # Define the main response function
 def get_response(user_input):
@@ -33,6 +37,10 @@ def get_response(user_input):
         return response
     # Check for 'thank you'
     response = thank_you(user_input)
+    if response:
+        return response
+    # Check for 'tell me a joke'
+    response = joke(user_input)
     if response:
         return response
     # Default response
