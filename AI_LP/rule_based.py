@@ -38,9 +38,11 @@ def get_response(user_input):
     # Default response
     return "I'm not sure how to respond to that. Can you try rephrasing?"
 
-
 # Example chatbot conversation
-user_message = input("You: ")
-print("Bot:", get_response(user_message))
-user_message = input("You: ")
-print("Bot:", get_response(user_message))
+while True:
+    user_input = input('You: ')
+    if user_input == 'Bye':
+        break
+
+    bot_response = get_response(user_input)
+    print('Bot:', bot_response)
