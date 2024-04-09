@@ -24,6 +24,11 @@ def joke(user_input):
     if 'tell me a joke' in user_input.lower():
         return "What did the comforter say after falling off the bed? Oh, sheet!"
 
+# Define a function to handle 'what is the weather forecast'    
+def weather(user_input):
+    if 'what is the weather forecast' in user_input.lower():
+        return "Go look outside, how would I know?"
+
 # Define the main response function
 def get_response(user_input):
     response = None
@@ -41,6 +46,10 @@ def get_response(user_input):
         return response
     # Check for 'tell me a joke'
     response = joke(user_input)
+    if response:
+        return response
+    # Check for 'what is the weather forecast'
+    response = weather(user_input)
     if response:
         return response
     # Default response
