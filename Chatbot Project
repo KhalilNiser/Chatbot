@@ -1,0 +1,17 @@
+Chatbot Project
+This chatbot was developed to simulate natural conversation and respond intelligently to user input. Below are some of the core libraries and tools I integrated into the system, each selected with a specific goal in mind to enhance performance, scalability, and linguistic understanding.
+
+Libraries and Technologies:
+Below are a few of the libraries I used, along with the reasoning behind selecting each one based on the project’s goals and functionality.
+
+LogisticRegression
+I implemented LogisticRegression as the classifier due to its ability to scale with growing datasets while maintaining reliable performance. While my current dataset is relatively small, this model provides a solid foundation that can seamlessly adapt as more training data is introduced. It’s also interpretable, which makes fine-tuning and debugging much more manageable.
+
+NLTK (Natural Language Toolkit)
+NLTK was chosen for its powerful NLP capabilities and ease of use. It provides essential tools for tokenization, stemming, classification, and more. As a mature library with a wide range of features, NLTK helped me efficiently preprocess and analyze textual data during the early stages of my chatbot's development.
+
+PorterStemmer
+I selected PorterStemmer to normalize word forms by reducing them to their base stems. This ensures consistent interpretation of words like “running,” “runner,” and “ran” as the same root—“run.” It’s efficient, language-specific, and helps boost accuracy by reducing noise in the model’s vocabulary.
+
+TfidfVectorizer
+TfidfVectorizer was chosen over more complex embeddings like Word2Vec or GloVe due to its simplicity and suitability for my current project size and scope. It captures term importance across the dataset without requiring extensive training time or data. For this chatbot, TF-IDF provided a practical balance between performance and precision, especially when working with limited labeled data.
